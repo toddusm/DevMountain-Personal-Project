@@ -1,0 +1,64 @@
+<head>
+	<link rel="stylesheet" href="css/login.css">
+</head>
+<!--Header-->
+<header></header>
+
+<!--Navbar-->
+
+<div id="navContainer">
+	<ul class="nav nav-pills">
+		<li role="presentation" ><a ng-href="#/login" id="navHome">Log In</a></li>
+		<li role="presentation" ><a ng-href="#/sign_up" id="navLogIn">Sign Up</a></li>
+		<li role="presentation" ><a ng-href="#" id="navTips">Tips</a></li>
+	</ul>
+</div>
+
+<!--login form-->
+<div class="container">
+	<div class="login">
+		<h4>Login</h4>
+			<hr>
+        		<form class="login-inner">
+    				<input type="text" ng-model="user.email" id="userEmail" class="form-control input-sm chat-input" placeholder="email"><br>
+    				<input type="text" ng-model="user.password" id="userPassword" class="form-control input-sm chat-input" placeholder="password">
+					<label class="checkbox-inline">
+						<input type="checkbox" id="remember" value="Remember me"> Remember me
+					</label>
+					<input class="btn btn-block btn-lg" type="submit" value="Log In" ng-click='loginUser(user)' id="loginBtn">
+				</form>
+			<a ng-href="#/sign_up" class="btn btn-sm btn-primary register">Register</a>
+			<a href="#" class="btn btn-sm btn-default forgot">Forgot your password?</a>
+	</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<custom-footer></custom-footer>
+
+
+
+
+<!--<div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+            <form class="form-login">
+            <h4>Log In-->
+                <!--Link to sign up page for new user-->
+                <!--<a class="btn btn-primary btn-xs" role="button" ng-href="#/sign_up" id="createAccount">New Users</a></p>
+            </h4>
+            <input type="text" ng-model="user.email" id="userEmail" class="form-control input-sm chat-input" placeholder="email" />
+            <br />
+            <input type="text" ng-model="user.password" id="userPassword" class="form-control input-sm chat-input" placeholder="password" />
+            <br />
+            <div class="wrapper">
+                <div class="group-btn" id="loginUser">     
+                    <input type="submit" ng-click='loginUser(user)' class="btn btn-primary btn-md" value="Log In">-->
+                    <!--<button ng-click='loginUser(user)' class="btn btn-primary btn-md">Log In</button>-->
+                <!--</div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>-->

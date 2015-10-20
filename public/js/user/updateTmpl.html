@@ -1,0 +1,128 @@
+<head>
+	<link rel="stylesheet" href="css/update.css">
+</head>
+
+<header></header>
+
+<!--navbar-->
+<div id="navContainer">
+	<ul class="nav nav-pills">
+		<li role="presentation" class="active"><a ng-href="/logout" id="logOut">Log Out</a></li>
+		<li role="presentation" ><a ng-href="#" id="navUpdate">Update Information</a></li>
+		<li role="presentation" ><a ng-href="#" id="navTips">Tips</a></li>
+	</ul>
+</div>
+
+<h3>Current Information</h3>
+<ul>
+	<li>First Name: {{user.firstName}}</li>
+	<li>Last Name: {{user.lastName}}</li>
+	<li>Email: {{user.email}}</li>
+</ul>
+<hr>
+<div class="container">
+    <h1 class="well">Update Information</h1>
+	<div class="col-lg-12 well">
+	<div class="row">
+		<form>
+			<div class="col-sm-12">
+				<h3>Contact Information</h3>
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label>First Name</label>
+						<input type="text", placeholder="Enter First Name Here.." class="form-control" ng-model="user.firstName">
+					</div>
+					<div class="col-sm-6 form-group">
+						<label>Last Name</label>
+						<input type="text", placeholder="Enter First Name Here.." class="form-control" ng-model="user.lastName">
+					</div>
+				</div>
+				<div class="form-group">
+						<label>Address</label>
+						<textarea placeholder="Enter Address Here..." rows="3" class="form-control" ng-model="user.address"></textarea>
+				</div>
+				<div class="row">
+					<div class="col-sm-4 form-group">
+						<label>City</label>
+						<input type="text" placeholder="Enter City Name Here..." class="form-control" ng-model="user.city">
+					</div>
+					<div class="col-sm-4 form-group">
+						<label>State</label>
+						<input type="text" placeholder="Enter State Name Here..." class="form-control" ng-model="user.state">
+					</div>
+					<div class="col-sm-4 form-group">
+						<label>Zip</label>
+						<input type="text" placeholder="Enter Zip Code Here..." class="form-control" ng-model="user.zip">
+					</div>
+				</div>
+				<div class="form-group">
+					<label>Phone Number</label>
+					<input type="text" placeholder="Enter Phone Number..." class="form-control" ng-model="user.phoneNumber">
+				</div>
+				<div class="form-group">
+					<label>Email</label>
+					<input type="text" placeholder="Enter Email..." class="form-control" ng-model="user.email">
+				</div>
+				<div class="form-group">
+					<label>Password</label>
+					<input type="text" placeholder="Enter New Password..." class="form-control" ng-model="user.password">
+				</div>
+				<hr id="break">
+				<h3>Additional Information</h3>
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label>Birthday</label>
+						<input type="text", placeholder="MM/DD/YYYY" class="form-control" ng-model="user.birthday">
+					</div>
+					<div class="col-sm-6 form-group">
+						<label>Anniversary</label>
+						<input type="text", placeholder="MM/DD/YYYY" class="form-control" ng-model="user.anniversary">
+					</div>
+				</div>
+				<div class="checkbox">
+  					<label><input ng-click="showChildren=!showChildren" type="checkbox" name="children">Children</label><br>
+					<label><input ng-click="showPets=!showPets" type="checkbox" name="pets">Pets</label>
+				</div>
+				<div class="row" ng-show="showChildren">
+					<div class="col-sm-3 form-group">
+						<label>Child</label>
+						<input type="text" placeholder="Child Name" class="form-control" ng-model="user.child1">
+					</div>
+					<div class="col-sm-3 form-group">
+						<label>Child</label>
+						<input type="text" placeholder="Child Name" class="form-control" ng-model="user.child2">
+					</div>
+					<div class="col-sm-3 form-group">
+						<label>Child</label>
+						<input type="text" placeholder="Child Name" class="form-control" ng-model="user.child3">
+					</div>
+					<div class="col-sm-3 form-group">
+						<label>Child</label>
+						<input type="text" placeholder="Child Name" class="form-control" ng-model="user.child4">
+					</div>
+				</div>
+				<div class="row" ng-show="showPets">
+					<div class="col-sm-4 form-group">
+						<label>Pet</label>
+						<input type="text" placeholder="Pet Name" class="form-control" ng-model="user.pet1">
+					</div>
+					<div class="col-sm-4 form-group">
+						<label>Pet</label>
+						<input type="text" placeholder="Pet Name" class="form-control" ng-model="user.pet2">
+					</div>
+					<div class="col-sm-4 form-group">
+						<label>Pet</label>
+						<input type="text" placeholder="Pet Name" class="form-control" ng-model="user.pet3">
+					</div>
+				</div>
+				<button type="button" class="btn btn-lg btn-info" ng-click="updateUser(user)">Save</button>
+			</div>
+		</form>
+	</div>	
+	</div>
+
+	
+
+</div>
+
+<custom-footer></custom-footer>

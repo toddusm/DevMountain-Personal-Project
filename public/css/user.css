@@ -1,0 +1,51 @@
+/*nav bar*/
+#navContainer {
+	background-color: black;
+}
+
+#logOut {
+	background-color: #CD1D20;
+	border: 1px solid black;
+	float: right;
+	border-bottom-color: black;
+}
+
+#navAbout {
+	color: white;
+}
+
+#navContact {
+	color: white;
+}
+
+/*Main Body*/
+#welcomeName {
+	text-shadow: 2px 2px white;
+}
+
+.imgBox {
+	background-color: #CD1D20;
+}
+
+/*Message Center*/
+#messages {
+	margin-top: 1%;
+	border: 1px solid black;
+}
+#messages:nth-child(even) {
+	background: snow;
+}
+
+#messages:nth-child(odd) {
+	background: whitesmoke;
+}
+
+#msgBreak {
+	border-top: 1px solid #CD1D20;
+}
+
+
+
+
+
+

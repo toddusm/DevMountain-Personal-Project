@@ -1,0 +1,88 @@
+<head>
+	<link rel="stylesheet" href="css/user.css">
+</head>
+
+<header></header>
+
+<!--navbar-->
+<div id="navContainer">
+	<ul class="nav nav-pills">
+		<li role="presentation" class="active"><a ng-href="/logout" id="logOut">Log Out</a></li>
+		<li role="presentation" ><a href="#/user/{{user._id}}/update" id="navAbout">Update Information</a></li>
+		<li role="presentation" ><a ng-href="#" id="navContact">Tips</a></li>
+	</ul>
+</div>
+
+<!--welcome-->
+<h1 id="welcomeName">Welcome {{user.firstName}} {{user.lastName}}</h1>
+<hr>
+
+<!--button grouping-->
+<div class="row" id="mainRow">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail" id="dates">
+      <img src="images/resourceCenter2.jpg" class="imgBox">
+      <div class="caption">
+        <h3>Resources</h3><br>
+        <p>Help is one click away!</p>
+        <p><a href="#" class="btn btn-primary" role="button">Next Steps</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="images/user avatar6.png" class="imgBox">
+      <div class="caption">
+        <h3>User Profile</h3><br>
+        <p>Tell me about yourself!</p>
+        <p><a href="#/user/{{user._id}}/update" class="btn btn-primary" role="button">Update Profile</a></p>        
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="images/slc2.jpg" class="imgBox">
+      <div class="caption">
+        <h3>Know Your Neighborhood</h3><br>
+        <p>Get Your Neighborhood Facts</p>
+        <!--<p>Use the Neighborhood Widget to get all sorts of facts about your neighborhood or any neighborhood including schools, income levels and many other criteria.</p>-->
+        <p><a href="#" class="btn btn-primary" role="button">Search Neighborhoods</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Message Center-->
+  <!--<ng-include src="'js/user/messageTmpl.html'" ng-controller="messageCtrl"></ng-include>-->
+  <div>
+    <h1>Message Center</h1>
+    <hr>
+    <div>
+      <form>
+      <textarea placeholder="Enter Message Here..." rows="3" class="form-control" ng-model="message.message"></textarea>
+      <button ng-click="createMessage(message)">Submit</button>
+      </form>
+    </div>
+    <div ng-repeat="message in messages" id="messages">
+      <div ng-repeat='conversation in message.conversations'>
+          {{conversation.message}} <br>
+          <div>
+            <div ng-repeat="reply in conversation.reply track by $index" id="replies">
+		          {{reply}}
+	         </div>
+        </div>
+        <div>
+          <!--<label><input ng-click="showChildren=!showChildren" type="checkbox" name="children">Reply</label>-->
+          <button type="button" class="btn btn-primary btn-xs" ng-click="showTextField=!showTextField">Reply</button>
+	     </div>
+       <form ng-show="showTextField">
+          <textarea placeholder="Enter Reply Here..." rows="3" class="form-control" ng-model="reply"></textarea>
+          <button ng-click="createReply(conversation._id, message._id, reply, $index)">Submit</button>
+       </form>
+      </div>
+    </div>
+  </div>
+<br>  
+<br>
+<br>
+
+<custom-footer></custom-footer>

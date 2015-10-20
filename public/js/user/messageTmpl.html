@@ -1,0 +1,17 @@
+<div>
+  <h1>Message Center</h1>
+  <hr>
+  <div>
+    <form>
+    <textarea placeholder="Enter Message Here..." rows="3" class="form-control" ng-model="message.message"></textarea>
+    <button ng-click="createMessage(message)">Submit</button>
+    </form>
+  </div>
+  <div ng-repeat="message in messages">
+    <!--{{message}}-->
+    <div ng-repeat='conversation in message.conversations'>
+      {{conversation.message}}
+    </div>
+  </div>
+  </div>
+</div>

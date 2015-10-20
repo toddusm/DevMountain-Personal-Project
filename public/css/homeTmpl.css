@@ -1,0 +1,25 @@
+/*nav bar*/
+#navContainer {
+	background-color: black;
+}
+
+#navHome {
+	background-color: #CD1D20;
+	border: 1px solid black;
+}
+
+#navAbout {
+	color: white;
+}
+
+#navContact {
+	color: white;
+}
+
+/*Main Body*/
+
+ .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }

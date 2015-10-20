@@ -1,0 +1,166 @@
+/*navbar*/
+#navContainer {
+	background-color: black;
+}
+
+#navHome {
+	background-color: #CD1D20;
+	border: 1px solid black;
+	color: white;
+}
+
+#navLogIn {
+	color: white;
+}
+
+#navTips {
+	color: white;
+}
+
+/*Main Page*/
+
+ body {
+    background-color: #ddd;
+}
+.login {
+	margin-top: 25px !important;
+	padding: 5px;
+	width: auto;
+	min-width: 320px;
+	max-width: 400px;
+	height: 400px;
+	background-color: #f3f3f3;
+	margin:0 auto;
+	border-radius: 10px;
+	border: 1px solid #c5c5c5;
+  text-align: center;
+}
+.login-inner {
+	margin:0 auto;
+	max-width: 380px;
+	width: auto;
+}
+.login>h4 {
+	font-size: 20px;
+	margin-left: 5px;
+	font-weight: 600;
+}
+.email {
+	margin-bottom: 5px;
+}
+.password {
+	margin-bottom: 5px;
+}
+.submit {
+	margin-top: 5px;
+}
+.forgot {
+	min-width:50px;
+	width: 49%;
+	float: right;
+	margin-top: 20px;
+}
+.register {
+	width: 50%;
+	float: left;
+	margin-top: 20px;
+}
+
+#loginBtn {
+  background-color: #CD1D20;
+  color: white;
+}
+
+@media (max-width: 320px) {
+	.forgot {
+		font-size: 9px;
+		font-weight: 700;
+		padding: 8px;
+	}
+}
+
+/*footer*/
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+#sm-links {
+    display: flex;
+    align-items: center;
+  }
+  
+ #fb-logo {
+     padding-right: 10px;
+ }
+ 
+ #youtube-logo {
+     padding-left: 10px;
+ }
+ 
+ #login-btn {
+     padding-left: 10px;
+ }
+ 
+ /*-----------------------------------------*/
+ /*type 2*/
+ 
+ /*body {
+  background-color: lightgray;
+  -webkit-font-smoothing: antialiased;
+  font: normal 14px Roboto,arial,sans-serif;
+}
+
+.container {
+    padding: 25px;
+    position: fixed;
+}
+
+.form-login {
+    background-color: #EDEDED;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border-color:#d2d2d2;
+    border-width: 5px;
+    box-shadow:0 1px 0 #cfcfcf;
+}
+
+h4 { 
+ border:0 solid #fff; 
+ border-bottom-width:1px;
+ padding-bottom:10px;
+ text-align: center;
+}
+
+#createAccount {
+    float: right;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+#loginUser {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+  border-color: black;
+  margin-top: .1em;
+  color: #f7f7f7;
+  font-size: 2em;
+}*/
