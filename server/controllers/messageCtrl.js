@@ -48,10 +48,4 @@ module.exports ={
 		});
 	},
 	
-	getReplies: function(req, res){
-		Message.find({})
-		.where("conversations.user")
-		.equals()
-	}
-	
 }

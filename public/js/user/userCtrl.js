@@ -26,4 +26,8 @@ ehh.controller('userCtrl', function($scope, $location, userService, getUser, get
 			console.log("createdReply", createdReply, $scope.messages[$index], $index)
 		})
 	}
+	
+	$scope.deleteMessage = function(){
+		
+	}
 })

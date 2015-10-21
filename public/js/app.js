@@ -33,7 +33,10 @@ ehh.config(function($routeProvider){
 				// getUserSession: function(),
 				getUser: function(userService, $route){
 					return userService.getUser($route.current.params.id)
-				}
+				},
+				getMessage: function(userService, $route){
+					return "";				}
+					
 			}
 		})
 		.when('/admin', {
@@ -48,6 +51,10 @@ ehh.config(function($routeProvider){
 					
 							}
 			}
+		})
+		.when('/neighborhood', {
+			templateUrl: 'js/neighborhood/neighborhoodTmpl.html',
+			controller: 'neighborhoodCtrl'
 		})
 		.otherwise(
 			'/'

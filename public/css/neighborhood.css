@@ -1,0 +1,19 @@
+/*nav bar*/
+#navContainer {
+	background-color: black;
+}
+
+#logOut {
+	background-color: #CD1D20;
+	border: 1px solid black;
+	float: right;
+	border-bottom-color: black;
+}
+
+#navAbout {
+	color: white;
+}
+
+#navContact {
+	color: white;
+}

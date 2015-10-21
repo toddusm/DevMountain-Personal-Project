@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var mongoose = require('mongoose');
 var cors = require('cors');
+var request = require('request');
 
 // CONFIG
 var config = require('./config');
@@ -11,6 +12,7 @@ var config = require('./config');
 //Controllers
 var UserCtrl = require('./controllers/UserCtrl');
 var MessageCtrl = require('./controllers/messageCtrl');
+var CensusCtrl = require('./controllers/censusCtrl')
 
 // Services
 var passport = require('./services/passport');
@@ -63,6 +65,9 @@ app.get('/message', MessageCtrl.getAllMessages)
 
 // reply
 app.put('/message/:id/conversation/:conversationId', MessageCtrl.createReply)
+
+//Census api
+app.get('/census/:zip', CensusCtrl.getInfo)
 
 
 //Connection
