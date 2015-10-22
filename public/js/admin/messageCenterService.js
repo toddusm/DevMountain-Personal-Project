@@ -1,0 +1,48 @@
+var ehh = angular.module('ehh');
+
+ehh.service('messageCenterService', function($http){
+	
+//Get Admin
+this.getCurrentUser = function(id){
+		return $http({
+			method: "GET",
+			url: 'http://localhost:8001/user/' + id
+		}).then(function(data){
+			// console.log('users', data)
+			return data.data
+		})
+	}
+
+// Messages
+	this.getAllMessages = function(){
+		return $http({
+			method: "GET",
+			url: 'http://localhost:8001/message/'
+		}).then(function(res, err){
+			if(err){
+				console.log(err)
+			} else {
+				console.log("Get All Messages Admin Service", res)
+				return res;
+			}
+		})
+	}
+	
+	// Replies
+		this.createReply = function(convo, id, reply){
+			console.log(convo, id, reply)
+		return $http({
+			method: "PUT",
+			url: 'http://localhost:8001/message/' + id + '/conversation/' + convo,
+			data: {
+				reply: reply
+			}
+		}).then(function(res){
+			console.log("Admin Service Reply", res);
+			return res;
+		}, function(err) {
+			return;
+		})
+	}
+})
+

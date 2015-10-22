@@ -5,7 +5,7 @@ ehh.controller('loginCtrl', function($scope, loginService, $location){
 		console.log("Success")
 		loginService.loginUser(user).then(function(resp) {
 			if(resp.data.admin === true){
-				$location.path('/admin')
+				$location.path('/admin/' + resp.data._id)
 			} else {
 			$location.path('/user/' + resp.data._id) }
 		}, function(err) {

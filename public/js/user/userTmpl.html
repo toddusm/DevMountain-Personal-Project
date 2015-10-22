@@ -56,29 +56,31 @@
   <div>
     <h1>Message Center</h1>
     <hr>
-    <div>
+    <div class="container">
       <form>
       <textarea placeholder="Enter Message Here..." rows="3" class="form-control" ng-model="message.message"></textarea>
       <button ng-click="createMessage(message)">Submit</button>
       </form>
     </div>
-    <div ng-repeat="message in messages" id="messages">
-      <div ng-repeat='conversation in message.conversations'>
-          {{conversation.message}} <br>
+    <div class="container">
+      <div ng-repeat="message in messages track by $index" id="messages">
+        <div ng-repeat='conversation in message.conversations'>
+            <h3>{{conversation.message}}</h1> <br>
+            <div>
+              <div ng-repeat="reply in conversation.reply track by $index" id="replies">
+                {{reply}}
+            </div>
+          </div>
           <div>
-            <div ng-repeat="reply in conversation.reply track by $index" id="replies">
-		          {{reply}}
-	         </div>
+            <!--<label><input ng-click="showChildren=!showChildren" type="checkbox" name="children">Reply</label>-->
+            <button type="button" class="btn btn-primary btn-xs" ng-click="showTextField=!showTextField">Reply</button>
+            <button type="button" class="btn btn-primary btn-xs" ng-click="deleteMessage(message._id, $index)">Delete</button>
         </div>
-        <div>
-          <!--<label><input ng-click="showChildren=!showChildren" type="checkbox" name="children">Reply</label>-->
-          <button type="button" class="btn btn-primary btn-xs" ng-click="showTextField=!showTextField">Reply</button>
-          <button type="button" class="btn btn-primary btn-xs" ng-click="deleteMessage(conversation)">Delete</button>
-	     </div>
-       <form ng-show="showTextField">
-          <textarea placeholder="Enter Reply Here..." rows="3" class="form-control" ng-model="reply"></textarea>
-          <button ng-click="createReply(conversation._id, message._id, reply, $index)">Submit</button>
-       </form>
+        <form ng-show="showTextField">
+            <textarea placeholder="Enter Reply Here..." rows="3" class="form-control" ng-model="reply"></textarea>
+            <button ng-click="createReply(conversation._id, message._id, reply, $index)">Submit</button>
+        </form>
+        </div>
       </div>
     </div>
   </div>

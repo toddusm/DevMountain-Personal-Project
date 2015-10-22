@@ -27,7 +27,9 @@ ehh.controller('userCtrl', function($scope, $location, userService, getUser, get
 		})
 	}
 	
-	$scope.deleteMessage = function(){
-		
+	$scope.deleteMessage = function(messageId, index){
+		userService.deleteMessage(messageId).then(function(){
+			$scope.messages.splice(index, 1)
+		})
 	}
 })

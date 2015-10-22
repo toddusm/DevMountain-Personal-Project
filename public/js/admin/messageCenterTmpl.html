@@ -1,0 +1,40 @@
+<head>
+	<link rel="stylesheet" href="css/admin.css">
+</head>
+
+<header></header>
+
+<div id="navContainer">
+	<ul class="nav nav-pills">
+		<li role="presentation" class="active"><a ng-href="/logout" id="logOut">Log Out</a></li>
+		<li role="presentation" ><a href="#/admin/" id="navAbout">Update User</a></li>
+		<!--<li role="presentation" ><a ng-href="#/messages" id="navContact">Message Center</a></li>-->
+	</ul>
+</div>
+
+<div class="container">
+	<h1>Message Center</h1>
+	<hr class="lineBreak">
+ 	<div ng-repeat="message in messages" id="messages">
+    <!--{{message}}-->
+		<div ng-repeat='conversation in message.conversations'>
+			<h3>{{conversation.user.firstName}} {{conversation.user.lastName}}: {{conversation.message}}  </h3>
+			<hr class="lineBreak">
+		<div ng-repeat="reply in conversation.reply track by $index" id="replies">
+			{{reply}} <hr class="lineBreak">
+		</div>
+		<div>
+			<!--<label><input ng-click="showChildren=!showChildren" type="checkbox" name="children">Reply</label>-->
+			<button type="button" class="btn btn-primary btn-xs" ng-click="showTextField=!showTextField">Reply</button>
+		</div>
+			<form ng-show="showTextField">
+				<textarea placeholder="Enter Reply Here..." rows="3" class="form-control" ng-model="reply"></textarea>
+				<button ng-click="createReply(conversation._id, message._id, reply, $index)">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+
+<custom-footer></custom-footer>

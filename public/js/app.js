@@ -39,15 +39,36 @@ ehh.config(function($routeProvider){
 					
 			}
 		})
-		.when('/admin', {
+		.when('/admin/:id', {
 			templateUrl: 'js/admin/adminTmpl.html',
 			controller: 'adminCtrl',
 			resolve: {
-				getAdmin: function(loginService, $location){
-					var currentUser = loginService.getCurrentUser();
-					if(!currentUser || !currentUser.admin){
-						$location.path('/')
+				getAdmin: function(loginService, $route, $location){
+					loginService.getCurrentUser($route.current.params.id).then(function(res){
+						var currentUser = res
+						return currentUser
+						console.log(currentUser.value.admin)
+						if(!currentUser || !currentUser.admin){
+							$location.path('/')
 					}
+					})
+					
+							}
+			}
+		})
+		.when('/admin/:id/message_center', {
+			templateUrl: 'js/admin/messageCenterTmpl.html',
+			controller: 'messageCenterCtrl',
+			resolve: {
+				getAdmin: function(loginService, $route, $location){
+					loginService.getCurrentUser($route.current.params.id).then(function(res){
+						var currentUser = res
+						return currentUser
+						console.log(currentUser.value.admin)
+						if(!currentUser.admin){
+							$location.path('/')
+					}
+					})
 					
 							}
 			}

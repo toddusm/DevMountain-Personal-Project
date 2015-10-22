@@ -63,6 +63,9 @@ app.post('/message', MessageCtrl.create);
 app.get('/message/:id', MessageCtrl.getMessages)
 app.get('/message', MessageCtrl.getAllMessages)
 
+// delete message
+app.delete('/message/:id', MessageCtrl.deleteMessage)
+
 // reply
 app.put('/message/:id/conversation/:conversationId', MessageCtrl.createReply)
 

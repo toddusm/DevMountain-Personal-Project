@@ -2,8 +2,14 @@ var ehh = angular.module('ehh');
 
 ehh.service('loginService', function($http){
 	var currentUser = null;
-	this.getCurrentUser = function(){
-		return currentUser;
+	this.getCurrentUser = function(id){
+		return $http({
+			method: "GET",
+			url: 'http://localhost:8001/user/' + id
+		}).then(function(data){
+			// console.log('users', data)
+			return data.data
+		})
 	}
 	
 	this.logout = function(){

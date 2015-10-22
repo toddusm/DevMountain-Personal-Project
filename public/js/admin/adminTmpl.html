@@ -8,26 +8,30 @@
 <div id="navContainer">
 	<ul class="nav nav-pills">
 		<li role="presentation" class="active"><a ng-href="/logout" id="logOut">Log Out</a></li>
-		<li role="presentation" ><a href="#/user/{{user._id}}/update" id="navAbout">Update User</a></li>
-		<li role="presentation" ><a ng-href="#/messages" id="navContact">Message Center</a></li>
+		<!--<li role="presentation" ><a href="#/user/{{user._id}}/update" id="navAbout">Update User</a></li>-->
+		<li role="presentation" ><a href="#/admin/{{admin}}/message_center" id="navContact">Message Center</a></li>
 	</ul>
 </div>
 <h1>Current Clients</h1>
 <hr>
-<div ng-repeat="user in users" id="userInfo">
-	<b>Name:</b> {{user.firstName}} {{user.lastName}} <br>
-	<b>Email:</b> {{user.email}} <br>
-	<b>Phone Number:</b> {{user.phoneNumber}}
-</div> 
+<div class="container">
+	<div ng-repeat="user in users" id="userInfo">
+		<b>Name:</b> {{user.firstName}} {{user.lastName}} <br>
+		<b>Email:</b> {{user.email}} <br>
+		<b>Phone Number:</b> {{user.phoneNumber}}
+	</div> 
+</div>
 <hr>
+
 <h1>Message Center</h1>
+<div class="container">
  <div ng-repeat="message in messages" id="messages">
     <!--{{message}}-->
     <div ng-repeat='conversation in message.conversations'>
-     	{{conversation.user.firstName}} {{conversation.user.lastName}}: {{conversation.message}}  
-		 <hr>
+     	<h3>{{conversation.user.firstName}} {{conversation.user.lastName}}: {{conversation.message}}  </h3>
+		 <hr class="lineBreak">
 	  <div ng-repeat="reply in conversation.reply track by $index" id="replies">
-		  {{reply}}
+		 {{reply}} <hr class="lineBreak">
 	  </div>
 	  <div>
   		<!--<label><input ng-click="showChildren=!showChildren" type="checkbox" name="children">Reply</label>-->
@@ -40,3 +44,8 @@
     </div>
 	
 </div>
+</div>
+<br>
+<br>
+
+<custom-footer></custom-footer>

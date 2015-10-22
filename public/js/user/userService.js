@@ -65,6 +65,13 @@ ehh.service('userService', function($http){
 		})
 	}
 	
+	this.deleteMessage = function(messageId){
+		return $http({
+			method: "DELETE",
+			url: 'http://localhost:8001/message/' + messageId
+		})
+	}
+	
 	//Replies
 	this.createReply = function(convo, id, reply){
 			console.log(convo, id, reply)

@@ -32,6 +32,17 @@ module.exports ={
 		})
 	},
 	
+	deleteMessage: function(req, res){
+		console.log("dltMsg", req.params.id)
+		Message.findByIdAndRemove(req.params.id, function(err, result){
+			if(err){
+				res.send(err)
+			} else {
+				res.json(result)
+			}
+		})
+	},
+	// Replies
 	createReply: function(req, res){
 		Message.findById(req.params.id, function(err, message){
 			if(err) return res.status(500).json(err);
@@ -47,5 +58,4 @@ module.exports ={
 			return res.status(200).json(message);
 		});
 	},
-	
 }
