@@ -12,21 +12,21 @@
 		<li role="presentation" ><a href="#/admin/{{admin}}/message_center" id="navContact">Message Center</a></li>
 	</ul>
 </div>
-<h1>Current Clients</h1>
-<hr>
 <div class="container">
-	<div ng-repeat="user in users" id="userInfo">
+	<h1 id="currentClients">Current Clients</h1>
+	User Search: <input type="text" placeholder="Search" ng-model="userSearch" id="adminSearch"></span>
+    <hr class="lineBreak">
+	<div ng-repeat="user in users | filter: userSearch" id="userInfo">
 		<b>Name:</b> {{user.firstName}} {{user.lastName}} <br>
 		<b>Email:</b> {{user.email}} <br>
 		<b>Phone Number:</b> {{user.phoneNumber}}
 	</div> 
 </div>
-<hr>
 
-<h1>Message Center</h1>
+
+<!--<h1>Message Center</h1>
 <div class="container">
  <div ng-repeat="message in messages" id="messages">
-    <!--{{message}}-->
     <div ng-repeat='conversation in message.conversations'>
      	<h3>{{conversation.user.firstName}} {{conversation.user.lastName}}: {{conversation.message}}  </h3>
 		 <hr class="lineBreak">
@@ -34,7 +34,6 @@
 		 {{reply}} <hr class="lineBreak">
 	  </div>
 	  <div>
-  		<!--<label><input ng-click="showChildren=!showChildren" type="checkbox" name="children">Reply</label>-->
 	  	<button type="button" class="btn btn-primary btn-xs" ng-click="showTextField=!showTextField">Reply</button>
 	  </div>
 		<form ng-show="showTextField">
@@ -44,7 +43,7 @@
     </div>
 	
 </div>
-</div>
+</div>-->
 <br>
 <br>
 

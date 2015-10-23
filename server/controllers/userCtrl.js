@@ -28,6 +28,7 @@ module.exports = {
 			if(err){
 				res.send(err)
 			} else {
+				console.log("Get Current User", result)
 				res.json(result)
 			}
 		})	

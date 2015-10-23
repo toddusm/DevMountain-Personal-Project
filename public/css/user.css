@@ -21,13 +21,30 @@
 /*Main Body*/
 #welcomeName {
 	text-shadow: 2px 2px white;
+	margin-left: 1.5%;
 }
 
 .imgBox {
 	background-color: #CD1D20;
 }
 
+#mainRow {
+	margin: auto;
+}
+
 /*Message Center*/
+#msgBtnSubmit {
+	margin: .2%
+}
+#msgWelcome{
+	text-shadow: 2px 2px white;
+	margin-left: 1.5%;
+}
+
+#msgTitle {
+	margin-left: 1.5%;
+}
+
 #messages {
 	margin-top: 1%;
 	border: 1px solid black;
@@ -41,8 +58,27 @@
 }
 
 #msgBreak {
-	border-top: 1px solid #CD1D20;
+	border-top: 3px solid black;
 }
+
+.lineBreak {
+	border-top: 1px solid lightgray;
+}
+
+#replies {
+	margin-left: 1.5%;
+}
+
+.msgBtn {
+	margin: 1.5%;
+}
+
+#replyBtnSubmit {
+	margin: .2%
+}
+
+
+
 
 
 

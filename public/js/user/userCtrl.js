@@ -1,35 +1,38 @@
 var ehh = angular.module('ehh');
 
-ehh.controller('userCtrl', function($scope, $location, userService, getUser, getMessage){
+ehh.controller('userCtrl', function($scope, $location, userService, getUser, getConvos){
 	$scope.user = getUser;
 	console.log("$scope.user", $scope.user)
-	$scope.messages = getMessage;
+	$scope.convos = getConvos;
 	$scope.updateUser = function(user){
 		userService.updateUser(user)
 	}
 	
-	$scope.createMessage = function(message){
+	//Converstaions
+	
+	$scope.createConvo = function(message){
 		console.log("Message", message)
-		userService.createMessage(message, $scope.user._id).then(function(createdMessage){
-			console.log("createdMessage", createdMessage.data)
-			$scope.messages.push(createdMessage.data);
+		userService.createConvo(message, $scope.user._id).then(function(createdConvo){
+			console.log("createdMessage", createdConvo)
+			$scope.convos.push(createdConvo);
 		})
 	}
 	
-	$scope.createReply = function(convo, id, reply, $index){
-		console.log("Reply", reply, 'id', id)
+	$scope.createReply = function(convoId, reply, index){
+		console.log("Reply", reply)
 		// $scope.messages[$index].conversations.reply.push(reply);
-		userService.createReply(convo, id, reply)
+		reply.user = $scope.user._id;
+		userService.createReply(convoId, reply)
 		.then(function(createdReply){
-			$scope.messages[$index].conversations = createdReply.data.conversations;
+			$scope.convos[index].messages.push(createdReply);
 			// $scope.messages.conversations[$index].reply = createdReply.data.conversations[$index].reply;
-			console.log("createdReply", createdReply, $scope.messages[$index], $index)
+			console.log("createdReply", createdReply)
 		})
 	}
 	
-	$scope.deleteMessage = function(messageId, index){
-		userService.deleteMessage(messageId).then(function(){
-			$scope.messages.splice(index, 1)
+	$scope.deleteMessage = function(convoId, index){
+		userService.deleteMessage(convoId).then(function(){
+			$scope.convos.splice(index, 1)
 		})
 	}
 })

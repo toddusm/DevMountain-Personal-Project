@@ -8,7 +8,7 @@
 <div id="navContainer">
 	<ul class="nav nav-pills">
 		<li role="presentation" class="active"><a ng-href="/logout" id="logOut">Log Out</a></li>
-		<li role="presentation" ><a href="#/user/{{user._id}}/update" id="navAbout">Update Information</a></li>
+		<!--<li role="presentation" ><a href="#/user/{{user._id}}/update" id="navAbout">Update Information</a></li>-->
 		<li role="presentation" ><a ng-href="#" id="navContact">Tips</a></li>
 	</ul>
 </div>
@@ -23,23 +23,35 @@
 
 <div class="container">
   <div>
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for..." ng-model="zip">
+    <div class="input-group" id="nSearch">
+      <input type="text" class="form-control" placeholder="Enter Zip Code..." ng-model="zip">
       <div class="input-group-btn">
         <button class="btn btn-default" type="button" ng-click="getInfo(zip)">Search</button>
       </div>
     </div>
   </div>
   
-  <div ng-repeat="city in cities">
-	 <b>Zip Code:</b> {{city[city.length -1]}} <br>
-	 <b>Total Population:</b> {{city[0] | number}} <br>
-	 <b>Male Poputlation:</b> {{city[1] | number}} <br>
-	 <b>Female Population:</b> {{city[2] | number}} <br>
-	 <b>Median Age:</b> {{city[3]}} <br>
-	 <b>% Carpool:</b> {{  ((city[4]/city[0])*100).toFixed(2) }}%<br>
-	 
+  <hr class="lineBreak">
+  <div id="infoResults">
+  <div ng-hide="results" class="searchResults">
+	  <b>Zip Code:</b> <br><br>
+	 <b>Total Population:</b> <br><br>
+	 <b>Male Poputlation:</b> <br><br>
+	 <b>Female Population:</b><br><br>
+	 <b>Median Age:</b> <br><br>
+	 <b>% Carpool:</b><br><br>
   </div>
-  
+  <div ng-show="results">
+	<div ng-repeat="city in cities" class="searchResults">
+		<b>Zip Code:</b> {{city[city.length -1]}} <br><br>
+		<b>Total Population:</b> {{city[0] | number}} <br><br>
+		<b>Male Poputlation:</b> {{city[1] | number}} <br><br>
+		<b>Female Population:</b> {{city[2] | number}} <br><br>
+		<b>Median Age:</b> {{city[3]}} <br><br>
+		<b>% Carpool:</b> {{  ((city[4]/city[0])*100).toFixed(2) }}%<br>
+		
+	</div>
+  </div>
+  </div>
 </div>
 <custom-footer></custom-footer>

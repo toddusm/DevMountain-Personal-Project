@@ -21,8 +21,8 @@ ehh.config(function($routeProvider){
 				getUser: function(userService, $route){
 					return userService.getUser($route.current.params.id)
 				},
-				getMessage: function(userService, $route){
-					return userService.getMessage($route.current.params.id)
+				getConvos: function(userService, $route){
+					return userService.getConvos($route.current.params.id)
 				}
 			}
 		})
@@ -44,7 +44,7 @@ ehh.config(function($routeProvider){
 			controller: 'adminCtrl',
 			resolve: {
 				getAdmin: function(loginService, $route, $location){
-					loginService.getCurrentUser($route.current.params.id).then(function(res){
+					return loginService.getCurrentUser($route.current.params.id).then(function(res){
 						var currentUser = res
 						return currentUser
 						console.log(currentUser.value.admin)
@@ -61,13 +61,13 @@ ehh.config(function($routeProvider){
 			controller: 'messageCenterCtrl',
 			resolve: {
 				getAdmin: function(loginService, $route, $location){
-					loginService.getCurrentUser($route.current.params.id).then(function(res){
+					return loginService.getCurrentUser($route.current.params.id).then(function(res){
 						var currentUser = res
-						return currentUser
-						console.log(currentUser.value.admin)
+						console.log(currentUser.admin)
 						if(!currentUser.admin){
 							$location.path('/')
-					}
+						}
+						return currentUser
 					})
 					
 							}

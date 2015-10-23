@@ -17,3 +17,23 @@
 #navContact {
 	color: white;
 }
+
+/*body*/
+
+#nSearch {
+	margin-top: 1%;
+}
+
+.lineBreak {
+	border-top: 1px solid black;
+}
+
+#infoResults {
+	border: 1px solid black;
+	background-color: white;
+	margin-bottom: 1%;
+}
+
+.searchResults {
+	margin: 2%;
+}

@@ -19,6 +19,15 @@
 }
 
 /*Current Clients*/
+#currentClients {
+	text-shadow: 2px 2px white;
+}
+
+#adminSearch{
+	display: inline-block;
+	border: 1px solid black;
+}
+
 #userInfo {
 	margin-top: 1%;
 	border: 1px solid black;
@@ -26,6 +35,10 @@
 }
 
 /*Message Center*/
+#msgWelcome {
+	text-shadow: 2px 2px white;
+	
+}
 #messages {
 	margin-top: 1%;
 	border: 1px solid black;
@@ -38,18 +51,26 @@
 	background: whitesmoke;
 }
 
+#msgTitle {
+	margin-left: 1.5%;
+}
+
+#msgBreak{
+	border-top: 3px solid black;
+}
+
 .lineBreak {
 	border-top: 1px solid black;
 }
 
-/*#replies {
-	margin-top: 1%;
-	border: 1px solid black;
-}*/
-/*#replies:nth-child(even) {
-	background: snow;
+#replies {
+	margin-left: 1.5%;
 }
 
-#replies:nth-child(odd) {
-	background: whitesmoke;
-}*/
+#replyBtn {
+	margin: 1.5%;
+}
+
+#msgBtnSubmit {
+	margin: 1%;
+}

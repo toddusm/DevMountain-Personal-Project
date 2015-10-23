@@ -14,32 +14,32 @@ this.getCurrentUser = function(id){
 	}
 
 // Messages
-	this.getAllMessages = function(){
+	this.getAllConvos = function(){
 		return $http({
 			method: "GET",
-			url: 'http://localhost:8001/message/'
+			url: '/convo/'
 		}).then(function(res, err){
 			if(err){
 				console.log(err)
 			} else {
 				console.log("Get All Messages Admin Service", res)
-				return res;
+				return res.data;
 			}
 		})
 	}
 	
 	// Replies
-		this.createReply = function(convo, id, reply){
-			console.log(convo, id, reply)
+		this.createReply = function(convoId, reply){
+			console.log(convoId, reply)
 		return $http({
 			method: "PUT",
-			url: 'http://localhost:8001/message/' + id + '/conversation/' + convo,
+			url: '/convo/' + convoId,
 			data: {
 				reply: reply
 			}
 		}).then(function(res){
 			console.log("Admin Service Reply", res);
-			return res;
+			return res.data;
 		}, function(err) {
 			return;
 		})

@@ -11,7 +11,7 @@ var config = require('./config');
 
 //Controllers
 var UserCtrl = require('./controllers/UserCtrl');
-var MessageCtrl = require('./controllers/messageCtrl');
+var ConvoCtrl = require('./controllers/convoCtrl');
 var CensusCtrl = require('./controllers/censusCtrl')
 
 // Services
@@ -39,6 +39,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Endpoints
+
 //sign up and login
 app.post('/user', UserCtrl.register);
 app.post('/login', passport.authenticate('local'), function(req, res) {
@@ -57,17 +58,17 @@ app.get('/user', UserCtrl.getAllUsers)
 app.put('/user', UserCtrl.update)
 
 //create message
-app.post('/message', MessageCtrl.create);
+app.post('/convo', ConvoCtrl.create);
 
 //get messages
-app.get('/message/:id', MessageCtrl.getMessages)
-app.get('/message', MessageCtrl.getAllMessages)
+app.get('/convo/:id', ConvoCtrl.getConvos)
+app.get('/convo', ConvoCtrl.getAllConvo)
 
 // delete message
-app.delete('/message/:id', MessageCtrl.deleteMessage)
+app.delete('/convo/:id', ConvoCtrl.deleteConvo)
 
 // reply
-app.put('/message/:id/conversation/:conversationId', MessageCtrl.createReply)
+app.put('/convo/:id/', ConvoCtrl.createReply)
 
 //Census api
 app.get('/census/:zip', CensusCtrl.getInfo)
