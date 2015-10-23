@@ -73,6 +73,9 @@ ehh.config(function($routeProvider){
 							}
 			}
 		})
+		.when('/resources', {
+			templateUrl: 'js/resources/resourcesTmpl.html'
+		})
 		.when('/neighborhood', {
 			templateUrl: 'js/neighborhood/neighborhoodTmpl.html',
 			controller: 'neighborhoodCtrl'

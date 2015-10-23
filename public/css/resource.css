@@ -18,22 +18,16 @@
 	color: white;
 }
 
-/*body*/
+/*Main body*/
 
-#nSearch {
-	margin-top: 1%;
+.resH {
+	text-shadow: 2px 2px white;
 }
 
-.lineBreak {
-	border-top: 1px solid black;
+.resList {
+	list-style: none;
 }
 
-#infoResults {
-	border: 1px solid black;
-	background-color: white;
-	margin-bottom: 1%;
-}
-
-.searchResults {
-	margin: 2%;
+.resBtn {
+	margin-top: 2%;
 }

@@ -33,36 +33,48 @@
 }
 
 /*Message Center*/
-#msgBtnSubmit {
-	margin: .2%
-}
 #msgWelcome{
 	text-shadow: 2px 2px white;
 	margin-left: 1.5%;
 }
 
-#msgTitle {
-	margin-left: 1.5%;
+.textArea {
+	border: 1px solid black;
 }
 
-#messages {
+#msgBtnSubmit {
+	margin: .3%
+}
+
+#convos {
 	margin-top: 1%;
 	border: 1px solid black;
 }
-#messages:nth-child(even) {
-	background: snow;
+#convos:nth-child(even) {
+	background: lightcyan;
 }
 
-#messages:nth-child(odd) {
+#convos:nth-child(odd) {
 	background: whitesmoke;
+}
+
+#message {
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+}
+
+#message:first-child {
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 3%;
+}
+
+.lineBreak {
+	border-top: 1px solid black;
 }
 
 #msgBreak {
 	border-top: 3px solid black;
-}
-
-.lineBreak {
-	border-top: 1px solid lightgray;
 }
 
 #replies {

@@ -39,32 +39,32 @@
 	text-shadow: 2px 2px white;
 	
 }
-#messages {
+
+#convos {
 	margin-top: 1%;
 	border: 1px solid black;
 }
-#messages:nth-child(even) {
-	background: snow;
-}
 
-#messages:nth-child(odd) {
+#convos:nth-child(even) {
 	background: whitesmoke;
 }
 
-#msgTitle {
-	margin-left: 1.5%;
+#convos:nth-child(odd) {
+	background: lightcyan;
 }
 
-#msgBreak{
-	border-top: 3px solid black;
+#message:first-child {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#message {
+	margin-left: 1.5%;
+	margin-right: 1.5%;
 }
 
 .lineBreak {
 	border-top: 1px solid black;
-}
-
-#replies {
-	margin-left: 1.5%;
 }
 
 #replyBtn {

@@ -42,7 +42,7 @@ ehh.service('userService', function($http){
 	this.createConvo = function(message, id){
 		return $http({
 			method: "POST",
-			url: '/convo',
+			url: '/convo/' + id,
 			data: {
 				messages: [{text: message, user: id}],
 				user: id

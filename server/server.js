@@ -58,7 +58,7 @@ app.get('/user', UserCtrl.getAllUsers)
 app.put('/user', UserCtrl.update)
 
 //create message
-app.post('/convo', ConvoCtrl.create);
+app.post('/convo/:id', ConvoCtrl.create);
 
 //get messages
 app.get('/convo/:id', ConvoCtrl.getConvos)
