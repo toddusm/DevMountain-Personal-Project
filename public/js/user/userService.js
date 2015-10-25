@@ -25,9 +25,9 @@ ehh.service('userService', function($http){
 	this.updateUser = function(user){
 		return $http({
 			method: "PUT",
-			url: '/user/',
+			url: '/user',
 			data: user
-		}).then(function(err, res){
+		}).then(function(res, err){
 			if(err){
 				// console.log(err);
 				return err

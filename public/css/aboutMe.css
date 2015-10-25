@@ -1,0 +1,35 @@
+/*nav bar*/
+#navContainer {
+	background-color: black;
+}
+
+#aboutMe {
+	background-color: #CD1D20;
+	border: 1px solid black;
+	float: right;
+	border-bottom-color: black;
+}
+
+#back {
+	color: white;
+}
+
+#navContact {
+	color: white;
+}
+
+/*main body*/
+#AP {
+	display: flex;
+	justify-content: space-around;
+	
+}
+.aboutPersonal  {
+	width: 200px;
+	height: 200px;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid black;
+	box-shadow: 1px 1px 1px 1px grey;
+	
+}

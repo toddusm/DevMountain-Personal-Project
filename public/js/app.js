@@ -34,8 +34,8 @@ ehh.config(function($routeProvider){
 				getUser: function(userService, $route){
 					return userService.getUser($route.current.params.id)
 				},
-				getMessage: function(userService, $route){
-					return "";				}
+				getConvos: function(userService, $route){
+					return {};				}
 					
 			}
 		})
@@ -79,6 +79,9 @@ ehh.config(function($routeProvider){
 		.when('/neighborhood', {
 			templateUrl: 'js/neighborhood/neighborhoodTmpl.html',
 			controller: 'neighborhoodCtrl'
+		})
+		.when('/aboutme', {
+			templateUrl: '/js/home/aboutmeTmpl.html'
 		})
 		.otherwise(
 			'/'

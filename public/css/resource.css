@@ -26,8 +26,9 @@
 
 .resList {
 	list-style: none;
+	display: inline-block
 }
 
 .resBtn {
-	margin-top: 2%;
+	margin-top: 3%;
 }

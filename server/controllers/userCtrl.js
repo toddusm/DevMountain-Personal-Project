@@ -35,13 +35,10 @@ module.exports = {
 	},
 	
 	// Users can update their information
-	update: function(req, res, done){
-		User.findByIdAndUpdate(req.user._id, req.body, {new: true}, function(err, result){
-			if(err){
-				return res.status(500).json(err)
-			} else {
-				res.status(200).json(result);
-			}
+	update: function(req, res){
+		User.findByIdAndUpdate(req.body._id, req.body, {new: true}, function(err, result){
+			if(err) return res.status(500).json(err);
+			return res.status(200).json(result);
 		});
 	},
 	
