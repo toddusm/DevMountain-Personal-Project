@@ -39,16 +39,20 @@
 }
 
 .textArea {
-	border: 1px solid black;
+	border: 1px solid grey;
+	box-shadow: 1px 1px 1px 1px grey;
 }
 
 #msgBtnSubmit {
-	margin: .3%
+	margin-top: 1%;
+	margin-left: 1.5;
 }
 
 #convos {
 	margin-top: 1%;
-	border: 1px solid black;
+	border: 1px solid lightgray;
+	box-shadow: 1px 1px 1px 1px grey;
+	
 }
 #convos:nth-child(even) {
 	background: lightcyan;
@@ -70,7 +74,7 @@
 }
 
 .lineBreak {
-	border-top: 1px solid black;
+	border-top: 1px solid grey;
 }
 
 #msgBreak {

@@ -11,7 +11,7 @@ ehh.service('neighborhoodService', function($http){
 			console.log(err)
 			return err
 		} else {
-			// res.data.shift();
+			res.data.shift();
 			console.log(res.data)
 			return(res.data)
 		}

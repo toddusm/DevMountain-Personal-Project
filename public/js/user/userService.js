@@ -63,7 +63,7 @@ ehh.service('userService', function($http){
 			method: "GET",
 			url: '/convo/' + user
 		}).then(function(response){
-			return(response.data)
+			return response.data
 		})
 	}
 	

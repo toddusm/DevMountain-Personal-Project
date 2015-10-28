@@ -17,33 +17,11 @@
 	User Search: <input type="text" placeholder="Search" ng-model="userSearch" id="adminSearch"></span>
     <hr class="lineBreak">
 	<div ng-repeat="user in users | filter: userSearch" id="userInfo">
-		<b>Name:</b> {{user.firstName}} {{user.lastName}} <br>
-		<b>Email:</b> {{user.email}} <br>
-		<b>Phone Number:</b> {{user.phoneNumber}}
+		<b class="ui">Name:</b> {{user.firstName}} {{user.lastName}} <br>
+		<b class="ui">Email:</b> {{user.email}} <br>
+		<b class="ui">Phone Number:</b> {{user.phoneNumber}}
 	</div> 
 </div>
-
-
-<!--<h1>Message Center</h1>
-<div class="container">
- <div ng-repeat="message in messages" id="messages">
-    <div ng-repeat='conversation in message.conversations'>
-     	<h3>{{conversation.user.firstName}} {{conversation.user.lastName}}: {{conversation.message}}  </h3>
-		 <hr class="lineBreak">
-	  <div ng-repeat="reply in conversation.reply track by $index" id="replies">
-		 {{reply}} <hr class="lineBreak">
-	  </div>
-	  <div>
-	  	<button type="button" class="btn btn-primary btn-xs" ng-click="showTextField=!showTextField">Reply</button>
-	  </div>
-		<form ng-show="showTextField">
-			<textarea placeholder="Enter Reply Here..." rows="3" class="form-control" ng-model="reply"></textarea>
-			<button ng-click="createReply(conversation._id, message._id, reply, $index)">Submit</button>
-		</form>
-    </div>
-	
-</div>
-</div>-->
 <br>
 <br>
 

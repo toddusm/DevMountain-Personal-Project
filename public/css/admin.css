@@ -20,7 +20,7 @@
 
 /*Current Clients*/
 #currentClients {
-	text-shadow: 2px 2px white;
+	text-shadow: 1px 1px white;
 }
 
 #adminSearch{
@@ -30,8 +30,15 @@
 
 #userInfo {
 	margin-top: 1%;
-	border: 1px solid black;
-	background-color: white;
+	border: 1px solid grey;;
+	background-color: #fefcfb;
+	box-shadow: 1px 1px 1px 1px gray;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.ui {
+	margin-left: 1%;
 }
 
 /*Message Center*/
@@ -42,7 +49,8 @@
 
 #convos {
 	margin-top: 1%;
-	border: 1px solid black;
+	border: 1px solid grey;;
+	box-shadow: 1px 1px 1px 1px gray;
 }
 
 #convos:nth-child(even) {
@@ -50,12 +58,13 @@
 }
 
 #convos:nth-child(odd) {
-	background: lightcyan;
+	background: #d6ebf1;
 }
 
 #message:first-child {
 	font-weight: bold;
 	font-size: 20px;
+	margin-top: 1.5%;
 }
 
 #message {
@@ -64,7 +73,7 @@
 }
 
 .lineBreak {
-	border-top: 1px solid black;
+	border-top: 1px solid grey;
 }
 
 #replyBtn {

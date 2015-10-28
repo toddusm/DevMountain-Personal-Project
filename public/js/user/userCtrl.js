@@ -4,10 +4,10 @@ ehh.controller('userCtrl', function($scope, $location, userService, getUser, get
 	console.log('getConvos', getConvos)
 	$scope.user = getUser;
 	console.log("$scope.user", $scope.user)
-	// $scope.convos = 'None yet';
-	// if(getConvos.length > 0) {
-	// $scope.convos = getConvos;
-	// }
+	$scope.convos = 'None yet';
+	if(getConvos.length >= 0) {
+	$scope.convos = getConvos;
+	}
 	$scope.updateUser = function(user){
 		userService.updateUser(user).then(function(res, err) {
 			if(err) console.log(err);

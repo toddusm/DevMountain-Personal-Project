@@ -83,6 +83,10 @@ ehh.config(function($routeProvider){
 		.when('/aboutme', {
 			templateUrl: '/js/home/aboutmeTmpl.html'
 		})
+		.when('/contact', {
+			templateUrl: '/js/contact/contactMeTmpl.html',
+			controller: 'contactMeCtrl'
+		})
 		.otherwise(
 			'/'
 		)

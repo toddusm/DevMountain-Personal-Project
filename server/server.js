@@ -5,6 +5,7 @@ var session = require('express-session');
 var mongoose = require('mongoose');
 var cors = require('cors');
 var request = require('request');
+var nodemailer = require('nodemailer')
 
 // CONFIG
 var config = require('./config');
@@ -13,6 +14,7 @@ var config = require('./config');
 var UserCtrl = require('./controllers/UserCtrl');
 var ConvoCtrl = require('./controllers/convoCtrl');
 var CensusCtrl = require('./controllers/censusCtrl')
+var ContactMeCtrl = require('./controllers/contactMeCtrl')
 
 // Services
 var passport = require('./services/passport');
@@ -72,6 +74,9 @@ app.put('/convo/:id/', ConvoCtrl.createReply)
 
 //Census api
 app.get('/census/:zip', CensusCtrl.getInfo)
+
+//contacgt me
+app.post('/contactme', ContactMeCtrl.sendMail)
 
 
 //Connection
