@@ -1,0 +1,20 @@
+body {
+	background-image: url('../images/comingsoon.jpg');
+	background-size: cover;
+}
+.container{
+	margin-top: 20%;
+}
+#comingSoon {
+	color: white;
+	text-align: center;
+	font-size: 50px;
+	text-shadow: 1px 1px black;
+}
+
+.CStext {
+	color: white;
+	text-align: center;
+	font-size: 20px;
+	text-shadow: 1px 1px black;
+}
