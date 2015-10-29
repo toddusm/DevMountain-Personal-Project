@@ -20,7 +20,7 @@
 
 /*Main Body*/
 #welcomeName {
-	text-shadow: 2px 2px white;
+	text-shadow: 1px 1px white;
 	margin-left: 1.5%;
 }
 
@@ -32,9 +32,13 @@
 	margin: auto;
 }
 
+.boxShadow {
+	box-shadow: 1px 1px 1px 1px gray;
+}
+
 /*Message Center*/
 #msgWelcome{
-	text-shadow: 2px 2px white;
+	text-shadow: 1px 1px white;
 	margin-left: 1.5%;
 }
 

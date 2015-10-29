@@ -9,7 +9,7 @@
 <div id="navContainer">
 	<ul class="nav nav-pills">
 		<li role="presentation" ><a ng-href="#/login" id="navHome">Log In</a></li>
-		<li role="presentation" ><a ng-href="#/sign_up" id="navLogIn">Sign Up</a></li>
+		<li role="presentation" ><a onclick="history.back(-1)" id="back">Back to Home</a></li>
 		<li role="presentation" ><a ng-href="#" id="navTips">Tips</a></li>
 	</ul>
 </div>
@@ -22,9 +22,9 @@
         		<form class="login-inner">
     				<input type="text" ng-model="user.email" id="userEmail" class="form-control input-sm chat-input" placeholder="email"><br>
     				<input type="text" ng-model="user.password" id="userPassword" class="form-control input-sm chat-input" placeholder="password">
-					<label class="checkbox-inline">
+					<!--<label class="checkbox-inline">
 						<input type="checkbox" id="remember" value="Remember me"> Remember me
-					</label>
+					</label>-->
 					<input class="btn btn-block btn-lg" type="submit" value="Log In" ng-click='loginUser(user)' id="loginBtn">
 				</form>
 			<a ng-href="#/sign_up" class="btn btn-sm btn-primary register">Register</a>

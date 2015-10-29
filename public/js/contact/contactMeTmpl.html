@@ -1,16 +1,52 @@
 <head>
-	<link rel="stylesheet" href="css/admin.css">
+	<link rel="stylesheet" href="css/contactMe.css">
 </head>
 
 <header></header>
 
-<form novalidate>
+<!--navbar-->
+<div id="navContainer">
+	<ul class="nav nav-pills">
+		<li role="presentation" class="active"><a ng-href="#/contactme" id="aboutMe">Contact Me</a></li>
+		<li role="presentation" ><a onclick="history.back(-1)" id="back">Back to Home</a></li>
+		<li role="presentation" ><a ng-href="#/resources" id="navContact">Tips</a></li>
+	</ul>
+</div> <br>
+
+
+<div class="container">
+    <h1 id="ContactMeTitle">Contact Me</h1>
+    <hr>
+    <div class="contact">
+    <form>
+        <div class="form-grop">
+            <h3>Email</h3>
+            <input type="text" class="form-control" placeholder="Email" ng-model="email.from">
+        </div>
+         <div class="form-grop">
+            <h3>Name</h3>
+            <input type="text" class="form-control" placeholder="Full Name" ng-model="email.name">
+        </div>
+         <div class="form-grop">
+            <h3>Message</h3>
+            <textarea type="text" class="form-control" placeholder="Message" ng-model="email.text"></textarea>
+        </div>
+        <input class="btn btn-block btn-lg" type="submit" value="Submit" ng-click='sendMail(email)' id="msgBtn">
+    </form>
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+<custom-footer></custom-footer>
+
+
+
+
+<!--<form novalidate>
     <input type="text" placeholder="email" ng-model="email.from">
     <input type="text" placeholder="name" ng-model="email.name">
     <textarea type="text" placeholder="text" ng-model="email.text"></textarea>
     <input type="submit" value="Submit" ng-click="sendMail(email)">
-</form>
-
-
-
-<custom-footer></custom-footer>
+</form>-->
