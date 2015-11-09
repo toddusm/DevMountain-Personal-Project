@@ -26,8 +26,15 @@
 	box-shadow: 1px 1px 1px 1px gray;
 }
 
-#currentListing{
-	margin: 1.5%;
+.homeBtn {
+	background-color: #CD1D20;
+	color: white;
+}
+
+#CLTitle{
+	text-align: center;
+	/*margin: 1.5%;*/
+	text-shadow: 1px 1px white;
 }
 
  .carousel-inner > .item > img,

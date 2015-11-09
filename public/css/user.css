@@ -36,6 +36,12 @@
 	box-shadow: 1px 1px 1px 1px gray;
 }
 
+.homeBtn {
+	background-color: #CD1D20;
+	color: white;
+	border: 1px solid transparent;
+}
+
 /*Message Center*/
 #msgWelcome{
 	text-shadow: 1px 1px white;

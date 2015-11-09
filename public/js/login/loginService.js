@@ -7,7 +7,7 @@ ehh.service('loginService', function($http){
 			method: "GET",
 			url: 'http://localhost:8001/user/' + id
 		}).then(function(data){
-			// console.log('users', data)
+			console.log('users', data)
 			return data.data
 		})
 	}

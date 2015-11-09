@@ -81,11 +81,14 @@ ehh.config(function($routeProvider){
 			controller: 'neighborhoodCtrl'
 		})
 		.when('/aboutme', {
-			templateUrl: '/js/home/aboutmeTmpl.html'
+			templateUrl: 'js/home/aboutmeTmpl.html'
 		})
 		.when('/contact', {
-			templateUrl: '/js/contact/contactMeTmpl.html',
+			templateUrl: 'js/contact/contactMeTmpl.html',
 			controller: 'contactMeCtrl'
+		})
+		.when('/comingsoon', {
+			templateUrl: 'js/home/comingSoon.html'
 		})
 		.otherwise(
 			'/'
