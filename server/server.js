@@ -11,7 +11,7 @@ var nodemailer = require('nodemailer')
 var config = require('./config');
 
 //Controllers
-var UserCtrl = require('./controllers/UserCtrl');
+var UserCtrl = require('./controllers/userCtrl');
 var ConvoCtrl = require('./controllers/convoCtrl');
 var CensusCtrl = require('./controllers/censusCtrl')
 var ContactMeCtrl = require('./controllers/contactMeCtrl')
