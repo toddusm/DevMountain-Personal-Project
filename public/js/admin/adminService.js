@@ -5,7 +5,7 @@ ehh.service("adminService", function($http){
 	this.getAllUsers = function(){
 		return $http({
 		method: "GET",
-		url: 'http://localhost:8001/user/'
+		url: '/user/'
 	}).then(function(res, err){
 		if(err){
 			console.log(err)
@@ -19,7 +19,7 @@ ehh.service("adminService", function($http){
 	this.getAllMessages = function(){
 		return $http({
 			method: "GET",
-			url: 'http://localhost:8001/message/'
+			url: '/message/'
 		}).then(function(res, err){
 			if(err){
 				console.log(err)
@@ -35,7 +35,7 @@ ehh.service("adminService", function($http){
 			console.log(convo, id, reply)
 		return $http({
 			method: "PUT",
-			url: 'http://localhost:8001/message/' + id + '/conversation/' + convo,
+			url: '/message/' + id + '/conversation/' + convo,
 			data: {
 				reply: reply
 			}

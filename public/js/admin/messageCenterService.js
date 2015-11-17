@@ -6,7 +6,7 @@ ehh.service('messageCenterService', function($http){
 this.getCurrentUser = function(id){
 		return $http({
 			method: "GET",
-			url: 'http://localhost:8001/user/' + id
+			url: '/user/' + id
 		}).then(function(data){
 			// console.log('users', data)
 			return data.data

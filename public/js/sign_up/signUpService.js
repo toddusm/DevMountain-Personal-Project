@@ -5,7 +5,7 @@ ehh.service('signUpService', function($http){
 		console.log(user);
 		return $http({
 			method: "POST",
-			url: 'http://localhost:8001/user',
+			url: '/user',
 			data: user
 
 		}).then(function(err, res){

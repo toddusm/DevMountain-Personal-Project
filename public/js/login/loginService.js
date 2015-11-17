@@ -5,7 +5,7 @@ ehh.service('loginService', function($http){
 	this.getCurrentUser = function(id){
 		return $http({
 			method: "GET",
-			url: 'http://localhost:8001/user/' + id
+			url: '/user/' + id
 		}).then(function(data){
 			console.log('users', data)
 			return data.data
@@ -19,7 +19,7 @@ ehh.service('loginService', function($http){
 	this.loginUser = function(user){
 		return $http({
 			method: "POST",
-			url: 'http://localhost:8001/login',
+			url: '/login',
 			data: user
 		}).then(function(res, err){
 			if(err){
