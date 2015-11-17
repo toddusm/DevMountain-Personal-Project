@@ -90,7 +90,5 @@ ehh.config(function($routeProvider){
 		.when('/comingsoon', {
 			templateUrl: 'js/home/comingSoon.html'
 		})
-		.otherwise(
-			'/'
-		)
+		.otherwise('/')
 })
