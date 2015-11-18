@@ -3,6 +3,7 @@
 Real Estate site that includes a customer portal with a message center to allow for easy back and forth for agent and client. 
 
 ##General Info
+* Register user which adds them to a client database.
 * Login saves customer info and uses Passport for auth. 
 * Client page that allows them to easily message their agent, update their contanct information, and look up neighborhood       information via the Census Api.
 * Admin page that allows to easily search for current clients and reply to messages. 
